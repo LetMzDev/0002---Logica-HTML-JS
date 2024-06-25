@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function Pular_Linha ()
+	{
+		document.write ( "<br><br>" );
+	}
+
+	function Exibir_Texto ( texto )
+	{
+		document.write ( texto );
+		Pular_Linha ();
+	}
+
+	// ----------------------------------------------
+
+	function Calcula_IMC ( peso, altura )
+	{
+		let IMC = Math.round ( peso / ( altura * altura ));
+		Exibir_Texto ( "IMC = " + IMC );
+	}
+
+	function Calcula_IMC_v2 ( peso, altura )
+	{
+		let IMC = Math.round ( peso / ( altura * altura ));
+		return IMC;
+	}
+
+	let IMC;
+	Exibir_Texto ( "<big>Função: Calcula_IMC</big>" );
+	Calcula_IMC ( 55, 1.68 );
+	Calcula_IMC ( 53, 1.65 );
+	document.write ( "<hr>" );
+
+	Exibir_Texto ( "<big>Função: Calcula_IMC_v2</big>" );
+	let IMC_Pessoa_1 = Calcula_IMC_v2 ( 55, 1.68 );
+	let IMC_Pessoa_2 = Calcula_IMC_v2 ( 53, 1.65 );
+
+	Exibir_Texto ( "IMC da pessoa 1 é: " + IMC_Pessoa_1 );
+	Exibir_Texto ( "IMC da pessoa 2 é: " + IMC_Pessoa_2 );
+
+</script>

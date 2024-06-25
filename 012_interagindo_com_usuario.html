@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function Pular_Linha ()
+	{
+		document.write ( "<br><br>" );
+	}
+
+	function Exibir_Texto ( texto )
+	{
+		document.write ( texto );
+		Pular_Linha ();
+	}
+
+	// ----------------------------------------------
+
+	function Calcula_IMC ( peso, altura )
+	{
+		let IMC = Math.round ( peso / ( altura * altura ));
+		return IMC;
+	}
+
+	document.write ( "<h1>Interagindo com o usuário</h1>" );
+
+	let nome = prompt ( "Informe seu nome:");
+	let peso = prompt ( nome + " informe seu  peso:" );
+	let altura = prompt ( nome + " informe sua altura" );
+
+	let IMC_Calculado = Calcula_IMC ( peso, altura );
+
+	Exibir_Texto ( nome + " seu IMC é: " + IMC_Calculado );
+
+</script>
