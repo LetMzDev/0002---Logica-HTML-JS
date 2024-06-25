@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function Pular_Linha ()
+	{
+		document.write ( "<br><br>" );
+	}
+
+	function Exibir_Texto ( texto )
+	{
+		document.write ( texto );
+		Pular_Linha ();
+	}
+
+	function Exibir_Titulo ( texto )
+	{
+		document.write ( "<h1>" + texto + "</h1>" );
+		Pular_Linha ();
+	}
+	// ---------------------------------------------
+
+	Exibir_Titulo ( "Convertendo Textos em Números: parseInt()" );
+
+	let vitorias = parseInt ( prompt ( "Entre com o número de vitórias" ));
+	let empates = parseInt ( prompt ( "Entre com o número de empates" ));
+
+	let pontos = ( 3 * vitorias ) + empates;
+
+	Exibir_Texto ( "Os pontos do time é " + pontos );
+
+</script>

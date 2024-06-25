@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function Pular_Linha ()
+	{
+		document.write ( "<br><br>" );
+	}
+
+	function Exibir_Texto ( texto )
+	{
+		document.write ( texto );
+		Pular_Linha ();
+	}
+
+	function Exibir_Titulo ( texto )
+	{
+		document.write ( "<h1>" + texto + "</h1>" );
+	}
+	// ---------------------------------------------
+
+	Exibir_Titulo ( "Adivinhe o número" );
+
+	const Numero_Pensado = Math.random ( 10 ) * 10; // 0 a 10
+	const Numero_Certo = Math.round ( Numero_Pensado );
+	console.log ( Numero_Certo );
+
+
+	let Chute = parseInt ( prompt ( "Digite seu chute:" ));
+
+	if ( Chute == Numero_Certo )
+		Exibir_Texto ( "Você acertou" );
+
+	else
+		Exibir_Texto ( "Você errou, o número pensado foi: " + Numero_Certo );
+
+</script>

@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function Pular_Linha ()
+	{
+		document.write ( "<br><br>" );
+	}
+
+	function Exibir_Texto ( texto )
+	{
+		document.write ( texto );
+		Pular_Linha ();
+	}
+
+	function Exibir_Titulo ( texto )
+	{
+		document.write ( "<h1>" + texto + "</h1>" );
+	}
+
+	// ----------------------------------------------
+
+	function Calcula_IMC ( peso, altura )
+	{
+		let IMC = Math.round ( peso / ( altura * altura ));
+		return IMC;
+	}
+
+	Exibir_Titulo ( "<h1>IMC</h1>" );
+
+	let nome = prompt ( "Informe seu nome:");
+	let peso = parseInt ( prompt ( nome + " informe seu  peso:" ));
+	let altura = parseFloat ( prompt ( nome + " informe sua altura" ));
+
+	let IMC_Calculado = Calcula_IMC ( peso, altura );
+
+	Exibir_Texto ( nome + " seu IMC é: " + IMC_Calculado );
+
+	if ( IMC_Calculado < 17 )
+		Exibir_Texto ( "Muito abaixo do peso." );
+
+	else if ( ( IMC_Calculado >= 17 ) && ( IMC_Calculado < 18.5 ) )
+		Exibir_Texto ( "Abaixo do peso." );
+
+	else if ( ( IMC_Calculado >= 18.5 ) && ( IMC_Calculado < 25 ) )
+		Exibir_Texto ( "Peso normal." );
+
+	else if ( ( IMC_Calculado >= 25 ) && ( IMC_Calculado < 30 ) )
+		Exibir_Texto ( "Acima do peso." );
+
+	else if ( ( IMC_Calculado >= 30 ) && ( IMC_Calculado < 35 ) )
+		Exibir_Texto ( "Obesidade grau I." );
+
+	else if ( ( IMC_Calculado >= 35 ) && ( IMC_Calculado < 40 ) )
+		Exibir_Texto ( "Obesidade grau II." );
+
+	else if ( IMC_Calculado >= 40 )
+		Exibir_Texto ( "Obesidade grau III." );
+
+</script>
