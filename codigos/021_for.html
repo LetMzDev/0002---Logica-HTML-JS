@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function Pular_Linha ()
+	{
+		document.write ( "<br><br>" );
+	}
+
+	function Exibir_Texto ( texto )
+	{
+		document.write ( texto );
+		Pular_Linha ();
+	}
+
+	function Exibir_Titulo ( texto )
+	{
+		document.write ( "<h1>" + texto + "</h1>" );
+	}
+	// ---------------------------------------------
+
+	Exibir_Titulo ( "For" );
+
+	let Tabuada = parseInt ( prompt ( "Qual tabuada?" ));
+
+	for ( let multiplicador = 1; multiplicador <= 10; multiplicador++ )
+		Exibir_Texto ( Tabuada + " x " + multiplicador + " = " + ( Tabuada * multiplicador ));
+
+</script>

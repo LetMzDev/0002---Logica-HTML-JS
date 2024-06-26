@@ -1,0 +1,61 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function Pular_Linha ()
+	{
+		document.write ( "<br><br>" );
+	}
+
+	function Exibir_Texto ( texto )
+	{
+		document.write ( texto );
+		Pular_Linha ();
+	}
+
+	function Exibir_Titulo ( texto )
+	{
+		document.write ( "<h1>" + texto + "</h1>" );
+	}
+	// ---------------------------------------------
+
+	function Sorteio_Numero ( numero )
+	{
+		const Valor_Certo = Math.round ( Math.random ( 10 ) * numero );
+		return Valor_Certo;
+	}
+
+	Exibir_Titulo ( "Adivinhe o número v.3" );
+
+	const Escolha = parseInt ( prompt ( "Gerar Número de 0 até ?" ));
+	const Numero_Pensado = Sorteio_Numero ( Escolha );
+	// console.log ( Numero_Pensado );
+
+	const Tentativas = 3;
+	let Contador = 1;
+
+	while ( Contador <= Tentativas )
+	{
+		let Chute = parseInt ( prompt ( Contador + "º Tentativa (máx 3)! Digite seu chute:" ));
+
+		if ( Chute == Numero_Pensado )
+		{
+			Exibir_Texto ( "Você acertou" );
+			break;
+		}
+
+		else
+		{
+			if ( Chute < Numero_Pensado )
+				Exibir_Texto ( "O número certo é maior que " + Chute );
+
+			else
+				Exibir_Texto ( "O número certo é menor que " + Chute );
+		}
+
+		Contador++;
+	}
+
+	Exibir_Texto ( "<big>FIM</big>" );
+
+</script>

@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function Pular_Linha ()
+	{
+		document.write ( "<br><br>" );
+	}
+
+	function Exibir_Texto ( texto )
+	{
+		document.write ( texto );
+		Pular_Linha ();
+	}
+
+	function Exibir_Titulo ( texto )
+	{
+		document.write ( "<h1>" + texto + "</h1>" );
+	}
+	// ---------------------------------------------
+
+	Exibir_Titulo ( "While" );
+
+	let Ano_Inicial = 1930;
+	let Ano_Final = parseInt ( prompt ( "Até ano deseja exibir os Anos de Copa?" ));
+
+	while ( Ano_Inicial <= Ano_Final )
+	{
+		Exibir_Texto ( "Teve Copa no ano " + Ano_Inicial );
+		Ano_Inicial += 4;
+	}
+
+</script>

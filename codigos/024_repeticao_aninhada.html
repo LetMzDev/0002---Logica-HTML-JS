@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function Pular_Linha ()
+	{
+		document.write ( "<br>" );
+	}
+
+	function Exibir_Texto ( texto )
+	{
+		document.write ( texto );
+		Pular_Linha ();
+	}
+
+	function Exibir_Titulo ( texto )
+	{
+		document.write ( "<h1>" + texto + "</h1>" );
+	}
+	// ---------------------------------------------
+
+	Exibir_Titulo ( "Repetições aninhadas" );
+
+	for ( let linha = 1; linha <= 3; linha++ )
+	{
+		for ( let coluna = 1; coluna <= 10; coluna++ )
+		{
+			document.write ( "*" );
+		}
+
+		Pular_Linha ();
+	}
+
+</script>

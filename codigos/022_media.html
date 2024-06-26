@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function Pular_Linha ()
+	{
+		document.write ( "<br><br>" );
+	}
+
+	function Exibir_Texto ( texto )
+	{
+		document.write ( texto );
+		Pular_Linha ();
+	}
+
+	function Exibir_Titulo ( texto )
+	{
+		document.write ( "<h1>" + texto + "</h1>" );
+	}
+	// ---------------------------------------------
+
+	Exibir_Titulo ( "Média de idades" );
+
+	let idade;
+	let soma_Idades = 0;
+	let qtde_Idades = parseInt ( prompt ( "Quantas idades deseja calcular a média?" ));
+
+	let contador = 0;
+
+	while ( contador < qtde_Idades )
+	{
+		idade = parseInt ( prompt ( "Informe a idade" ));
+		soma_Idades = soma_Idades + idade;
+		contador++;
+	}
+
+	let media_Idades = Math.round ( soma_Idades / qtde_Idades );
+
+	Exibir_Texto ( "A média das idades é " + media_Idades );
+
+</script>
