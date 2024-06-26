@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>Input e Button</h1>
+<h3>Adivinha o número</h3>
+
+<input/>
+<button>Compare com o segredo</button>
+
+<script>
+
+	let segredo = Math.round ( Math.random () * 10 );
+
+	let input = document.querySelector ( "input" );
+	input.focus ();
+
+	let button = document.querySelector ( "button" );
+	button.onclick = Verifica; // Sem os parênteses da função, todo o conteúdo ficará no onclick
+	
+	function Verifica ()
+	{
+		if ( input.value == segredo )
+			alert ( "Você acertou" );
+
+		else
+			alert ( "Você errou" );
+
+		input.value = ""; // Limpa o  campo digitado
+		input.focus (); // Coloca o curso não campo, está com foco
+	}
+
+
+</script>
